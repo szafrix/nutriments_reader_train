@@ -1,9 +1,9 @@
 [project]
-name = "foodtrack_img2txt"
+name = "nutriments_reader_train"
 version = "0.1.0"
 description = "Default template for PDM package"
 authors = [
-    {name = "Bartosz Szafranski", email = "bartosz.szafranski1@gmail.com"},
+    {name = "szafrixxx", email = "bartosz.szafranski1@gmail.com"},
 ]
 dependencies = [
     "pillow>=10.4.0",
