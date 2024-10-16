@@ -6,7 +6,6 @@ from typing import Any, Dict, List
 from tqdm import tqdm
 import json
 
-
 # define logger to console
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.DEBUG)
