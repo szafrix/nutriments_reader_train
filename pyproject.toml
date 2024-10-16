@@ -1,0 +1,29 @@
+[project]
+name = "foodtrack_img2txt"
+version = "0.1.0"
+description = "Default template for PDM package"
+authors = [
+    {name = "Bartosz Szafranski", email = "bartosz.szafranski1@gmail.com"},
+]
+dependencies = [
+    "pillow>=10.4.0",
+    "pandas>=2.2.3",
+    "torch>=2.4.1",
+    "transformers>=4.45.2",
+    "datasets>=3.0.1",
+    "ipykernel>=6.29.5",
+    "setuptools>=75.1.0",
+    "easyocr>=1.7.2",
+    "lightning>=2.4.0",
+    "python-dotenv>=1.0.1",
+    "wandb>=0.18.3",
+    "matplotlib>=3.9.2",
+    "accelerate>=1.0.1",
+]
+requires-python = "==3.11.*"
+readme = "README.md"
+license = {text = "MIT"}
+
+
+[tool.pdm]
+distribution = false
