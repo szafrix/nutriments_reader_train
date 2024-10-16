@@ -5,12 +5,12 @@ from transformers import (
     Seq2SeqTrainer,
     Seq2SeqTrainingArguments,
 )
-from training.hf_transformers.dataset import FoodDataset
+from training.trocr.dataset import FoodDataset
 from transformers import default_data_collator
 import wandb
 import torch
 import numpy as np
-from training.hf_transformers.config import MODEL_CONFIG, DATALOADER_CONFIG, TRAIN_CONFIG, EVAL_CONFIG, CALLBACK_CONFIG
+from training.trocr.config import MODEL_CONFIG, DATALOADER_CONFIG, TRAIN_CONFIG, EVAL_CONFIG, CALLBACK_CONFIG
 
 config = dotenv_values(".env")
 os.environ["WANDB_API_KEY"] = config["WANDB_API_KEY"]
@@ -34,15 +34,15 @@ val_dataset = torch.utils.data.Subset(val_dataset, indices=range(256))
 
 
 ### LOG .PY FILES
-with open("training/hf_transformers/config.py", "r") as config_file:
+with open("training/trocr/config.py", "r") as config_file:
     config_content = config_file.read()
     wandb.log({"config_file_content": wandb.Html(f"<pre>{config_content}</pre>")})
     
-with open("training/hf_transformers/train.py", "r") as train_file:
+with open("training/trocr/train.py", "r") as train_file:
     train_content = train_file.read()
     wandb.log({"train_file_content": wandb.Html(f"<pre>{train_content}</pre>")})
     
-with open("training/hf_transformers/dataset.py", "r") as dataset_file:
+with open("training/trocr/dataset.py", "r") as dataset_file:
     dataset_content = dataset_file.read()
     wandb.log({"dataset_file_content": wandb.Html(f"<pre>{dataset_content}</pre>")})
     
