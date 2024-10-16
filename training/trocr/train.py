@@ -12,10 +12,10 @@ import torch
 import numpy as np
 from training.trocr.config import MODEL_CONFIG, DATALOADER_CONFIG, TRAIN_CONFIG, EVAL_CONFIG, CALLBACK_CONFIG
 
-config = dotenv_values(".env")
-os.environ["WANDB_API_KEY"] = config["WANDB_API_KEY"]
+env_values = dotenv_values(".env")
+os.environ["WANDB_API_KEY"] = env_values["WANDB_API_KEY"]
 
-wandb.init(project="NutrimentsReader")
+wandb.init(project=env_values["PROJECT_NAME"])
 
 checkpoint = MODEL_CONFIG["checkpoint"]
 

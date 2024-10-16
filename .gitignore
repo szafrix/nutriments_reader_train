@@ -1,3 +1,4 @@
 data/
 .pdm-python
 pdm-python
+.env
